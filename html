@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpendWise - Personal Financial Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-icon">💳</span>
+        <h2>SpendWise</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="nav-link active"><span class="nav-icon">📊</span> Overview</a></li>
+          <li><a href="#" class="nav-link"><span class="nav-icon">💸</span> Expenses</a></li>
+          <li><a href="#" class="nav-link"><span class="nav-icon">🎯</span> Budgets</a></li>
+          <li><a href="#" class="nav-link"><span class="nav-icon">📈</span> Analytics</a></li>
+          <li><a href="#" class="nav-link"><span class="nav-icon">⚙️</span> Settings</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-pill">
+          <div class="avatar">MI</div>
+          <div class="user-info">
+            <p class="user-name">Musin Ismail</p>
+            <p class="user-role">Free Plan</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-title">
+        <h1>Monthly Budget Overview</h1>
+        <p class="subtitle">Track and manage your spending categories</p>
+      </div>
+      <div class="header-actions">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Search transactions..." aria-label="Search transactions" />
+        </div>
+        <button class="profile-btn" aria-label="User menu">
+          <span class="bell-icon">🔔</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-content">
+      <section class="overview-summary">
+        <div class="summary-pill">
+          <span>Total Spent: <strong>$2,450.00</strong></span>
+        </div>
+        <div class="summary-pill">
+          <span>Remaining Budget: <strong>$1,050.00</strong></span>
+        </div>
+      </section>
+
+      <!-- Category Cards Grid -->
+      <section class="cards-grid">
+        <!-- Card 1: Food & Dining -->
+        <article class="category-card" tabindex="0">
+          <div class="card-header">
+            <div class="category-meta">
+              <span class="category-icon icon-food">🍔</span>
+              <h3 class="category-title">Food & Dining</h3>
+            </div>
+            <span class="badge badge-warning">78% Used</span>
+          </div>
+          <div class="card-body">
+            <div class="amount-display">
+              <span class="spent">$470.00</span>
+              <span class="limit">/ $600.00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill warning-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="status-text">14 Transactions</span>
+            <span class="trend trend-up">+$45 this week</span>
+          </div>
+        </article>
+
+        <!-- Card 2: Transportation -->
+        <article class="category-card" tabindex="0">
+          <div class="card-header">
+            <div class="category-meta">
+              <span class="category-icon icon-transport">🚗</span>
+              <h3 class="category-title">Transportation</h3>
+            </div>
+            <span class="badge badge-success">52% Used</span>
+          </div>
+          <div class="card-body">
+            <div class="amount-display">
+              <span class="spent">$180.00</span>
+              <span class="limit">/ $350.00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill success-fill" style="width: 52%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="status-text">8 Transactions</span>
+            <span class="trend trend-down">-$12 this week</span>
+          </div>
+        </article>
+
+        <!-- Card 3: Housing & Rent -->
+        <article class="category-card" tabindex="0">
+          <div class="card-header">
+            <div class="category-meta">
+              <span class="category-icon icon-housing">🏠</span>
+              <h3 class="category-title">Housing & Rent</h3>
+            </div>
+            <span class="badge badge-neutral">100% Paid</span>
+          </div>
+          <div class="card-body">
+            <div class="amount-display">
+              <span class="spent">$1,200.00</span>
+              <span class="limit">/ $1,200.00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill neutral-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="status-text">1 Transaction</span>
+            <span class="trend">Fixed recurring</span>
+          </div>
+        </article>
+
+        <!-- Card 4: Entertainment -->
+        <article class="category-card" tabindex="0">
+          <div class="card-header">
+            <div class="category-meta">
+              <span class="category-icon icon-entertainment">🎬</span>
+              <h3 class="category-title">Entertainment</h3>
+            </div>
+            <span class="badge badge-danger">92% Used</span>
+          </div>
+          <div class="card-body">
+            <div class="amount-display">
+              <span class="spent">$184.00</span>
+              <span class="limit">/ $200.00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill danger-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="status-text">6 Transactions</span>
+            <span class="trend trend-up">+$28 this week</span>
+          </div>
+        </article>
+
+        <!-- Card 5: Savings & Growth -->
+        <article class="category-card" tabindex="0">
+          <div class="card-header">
+            <div class="category-meta">
+              <span class="category-icon icon-savings">📈</span>
+              <h3 class="category-title">Savings & Growth</h3>
+            </div>
+            <span class="badge badge-success">On Track</span>
+          </div>
+          <div class="card-body">
+            <div class="amount-display">
+              <span class="spent">$250.00</span>
+              <span class="limit">/ $800.00 Goal</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill success-fill" style="width: 31%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="status-text">Auto-deposit enabled</span>
+            <span class="trend trend-up">+12% target</span>
+          </div>
+        </article>
+
+        <!-- Card 6: Utilities & Bills -->
+        <article class="category-card" tabindex="0">
+          <div class="card-header">
+            <div class="category-meta">
+              <span class="category-icon icon-utilities">⚡</span>
+              <h3 class="category-title">Utilities & Bills</h3>
+            </div>
+            <span class="badge badge-warning">47% Used</span>
+          </div>
+          <div class="card-body">
+            <div class="amount-display">
+              <span class="spent">$166.00</span>
+              <span class="limit">/ $350.00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill warning-fill" style="width: 47%;"></div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="status-text">3 Bills Paid</span>
+            <span class="trend">1 Pending</span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
